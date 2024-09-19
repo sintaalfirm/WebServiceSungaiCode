@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<style>
+  #customers {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 110px;
+  }
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  #customers tr:hover {background-color: #ddd;}
+  #customers th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #2b4170;
+    color: white;
+    }
+  </style>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Pemetaan Risiko Banjir Longsor</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="assets/img/logo.png" class="logo-img">
+        <h1 style="font-size: 20px;">Teknik Geodesi UGM<span>.</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li class="dropdown"><a href="#"><span>Tentang</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="tentang_banjir.html">Banjir</a></li>
+              <li><a href="tentang_longsor.html">Longsor</a></li>
+            </ul>
+            <li><a href="peta.html">Story Maps </a></li>
+          <li class="dropdown"><a href="#"><span>Peta Web</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="QGIS2WEB\risiko_banjir\peta\risiko_banjir.html">Risiko Banjir</a></li>
+              <li><a href="QGIS2WEB\risiko_longsor\peta\risiko_longsor.html">Risiko Longsor</a></li>
+              <li><a href="QGIS2WEB\PL\peta\PL.html">Penggunaan Lahan</a></li>
+            </ul>
+          </li>
+          <li><a href="timkami.html" class="active">Tim </a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/bg1.png');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Tim Kami</h2>
+        <ol>
+          <li><a href="index.html">Beranda</a></li>
+          <li>Tim Kami</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+
+<!-- ======= Our Team Section ======= -->
+<section id="team" class="team">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Kelompok 6</h2>
+    </div>
+
+    <div class="row gy-5">
+
+      <!-- Team Member 1 -->
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+        <div class="member-img">
+          <img src="assets/img/team/anisa.png" class="img-fluid rounded-circle" alt="Walter White">
+        </div>
+        <div class="member-info text-center">
+          <h4>Anisa Putri Ambiani</h4>
+          <span>20/456139/TK/50269</span>        
+        </div>
+      </div><!-- End Team Member -->
+
+      <!-- Team Member 2 (Centered) -->
+      <div class="col-lg-4 col-md-6 member mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <div class="member-img">
+          <img src="assets/img/team/cece 1.png" class="img-fluid rounded-circle" alt="Cheicylia Grevelyn Hutasoit">
+        </div>
+        <div class="member-info text-center">
+          <h4>Cheicylia Grevelyn Hutasoit</h4>
+          <span>20/460245/TK/50834</span> 
+        </div>
+      </div><!-- End Team Member -->
+
+      <!-- Team Member 3 (Centered) -->
+      <div class="col-lg-4 col-md-6 member mx-auto" data-aos="fade-up" data-aos-delay="300">
+        <div class="member-img">
+          <img src="assets/img/team/safira.png" class="img-fluid rounded-circle" alt="William Anderson">
+        </div>
+        <div class="member-info text-center">
+          <h4>Safira Ardelia Oktaviani</h4>
+          <span>20/463335/TK/51327</span>      
+        </div>
+      </div><!-- End Team Member -->
+
+      <!-- Team Member 4 (Centered) -->
+      <div class="col-lg-4 col-md-6 member mx-auto" data-aos="fade-up" data-aos-delay="400">
+        <div class="member-img">
+          <img src="assets/img/team/alya.png" class="img-fluid rounded-circle" alt="Amanda Jepson">
+        </div>
+        <div class="member-info text-center">
+          <h4> Alya Sitaningrum</h4>
+          <span> 20/456138/TK/50268</span>
+        </div>
+      </div><!-- End Team Member -->
+
+      <!-- Team Member 5 -->
+      <div class="col-lg-4 col-md-6 member mx-auto" data-aos="fade-up" data-aos-delay="500">
+        <div class="member-img">
+          <img src="assets/img/team/novita.png" class="img-fluid rounded-circle" alt="Brian Doe">
+        </div>
+        <div class="member-info text-center">
+          <h4>Lutfy Angsoka Novita</h4>
+          <span>20/463319/TK/51311</span>
+        </div>
+      </div><!-- End Team Member -->
+
+    </div>
+
+  </div>
+</section><!-- End Our Team Section -->
+
+<!-- ======= Our Team Section ======= -->
+<section id="team" class="team">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Kelompok 20</h2>
+    </div>
+
+    <div class="row gy-5">
+
+      <!-- Team Member 1 -->
+      <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+        <div class="member-img">
+          <img src="assets/img/team/renaldy.png" class="img-fluid rounded-circle" alt="Walter White">
+        </div>
+        <div class="member-info text-center">
+          <h4>Renaldy Aditya Putra Ramadhan</h4>
+          <span>20/456745/TK/50569</span>          
+        </div>
+      </div><!-- End Team Member -->
+
+      <!-- Team Member 2 (Centered) -->
+      <div class="col-lg-4 col-md-6 member mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <div class="member-img">
+          <img src="assets/img/team/annis.png" class="img-fluid rounded-circle" alt="Sarah Jhonson">
+        </div>
+        <div class="member-info text-center">
+          <h4>Annisa Cameilia Nawangsari</h4>
+          <span>20/456140/TK/50270</span>
+        </div>
+      </div><!-- End Team Member -->
+
+      <!-- Team Member 3 (Centered) -->
+      <div class="col-lg-4 col-md-6 member mx-auto" data-aos="fade-up" data-aos-delay="300">
+        <div class="member-img">
+          <img src="assets/img/team/yolanda.png" class="img-fluid rounded-circle" alt="William Anderson">
+        </div>
+        <div class="member-info text-center">
+          <h4>Yolanda Wulandari </h4>
+          <span>20/463344/TK/51336</span>      
+        </div>
+      </div><!-- End Team Member -->
+
+      <!-- Team Member 4 (Centered) -->
+      <div class="col-lg-4 col-md-6 member mx-auto" data-aos="fade-up" data-aos-delay="400">
+        <div class="member-img">
+          <img src="assets/img/team/enjel.png" class="img-fluid rounded-circle" alt="Amanda Jepson">
+        </div>
+        <div class="member-info text-center">
+          <h4>Enjel Lyka Siahaan </h4>
+          <span>20/456749/TK/50563</span>
+        </div>
+      </div><!-- End Team Member -->
+
+      <!-- Team Member 5 -->
+      <div class="col-lg-4 col-md-6 member mx-auto" data-aos="fade-up" data-aos-delay="500">
+        <div class="member-img">
+          <img src="assets/img/team/vernika.png" class="img-fluid rounded-circle" alt="Brian Doe">
+        </div>
+        <div class="member-info text-center">
+          <h4>Vernika Silviana </h4>
+          <span>20/463340/TK/51332</span>
+        </div>
+      </div><!-- End Team Member -->
+
+    </div>
+
+  </div>
+</section><!-- End Our Team Section -->
+  
+<!-- ======= Our Projects Section ======= -->
+<section id="projects" class="projects">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Dokumentasi</h2>
+     
+    </div>
+
+    <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+
+      <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-Landscape">Landscape</li>
+        <li data-filter=".filter-Portrait">Portrait</li>
+      </ul><!-- End Projects Filters -->
+
+      <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-Landscape">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/projects/1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Landscape 1</h4> 
+              <a href="assets/img/projects/1.jpg" title="Landscape" data-gallery="portfolio-gallery-Landscape" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
+            </div>
+          </div>
+        </div><!-- End Projects Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-Landscape">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/projects/2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Landscape 1</h4> 
+              <a href="assets/img/projects/2.jpg" title="Landscape 1" data-gallery="portfolio-gallery-Landscape" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
+            </div>
+          </div>
+        </div><!-- End Projects Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-Landscape">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/projects/3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Landscape 1</h4> 
+              <a href="assets/img/projects/3.jpg" title="Landscape 1" data-gallery="portfolio-gallery-Landscape" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
+            </div>
+          </div>
+        </div><!-- End Projects Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-Portrait">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/projects/4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Portrait 1</h4> 
+              <a href="assets/img/projects/4.jpg" title="Portrait 1" data-gallery="portfolio-gallery-Portrait" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
+            </div>
+          </div>
+        </div><!-- End Projects Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-Landscape">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/projects/5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Landscape 2</h4> 
+              <a href="assets/img/projects/5.jpg" title="Landscape 2" data-gallery="portfolio-gallery-Landscape" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
+            </div>
+          </div>
+        </div><!-- End Projects Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-Portrait">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/projects/6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Portrait 2</h4> 
+              <a href="assets/img/projects/6.jpg" title="Portrait 2" data-gallery="portfolio-gallery-Portrait" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
+            </div>
+          </div>
+        </div><!-- End Projects Item -->
+
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-Landscape">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/projects/8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Landscape 2</h4> 
+              <a href="assets/img/projects/8.jpg" title="Landscape 2" data-gallery="portfolio-gallery-Landscape" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
+            </div>
+          </div>
+        </div><!-- End Projects Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-Landscape">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/projects/9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Landscape 3</h4> 
+              <a href="assets/img/projects/9.jpg" title="Landscape 3" data-gallery="portfolio-gallery-Landscape" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
+            </div>
+          </div>
+        </div><!-- End Projects Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-Portrait">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/projects/10.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Kelompok 6</h4> 
+              <a href="assets/img/projects/10.jpg" title="Portrait 3" data-gallery="portfolio-gallery-Portrait" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
+            </div>
+          </div>
+        </div><!-- End Projects Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-Portrait">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/projects/14.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Portrait 2</h4> 
+              <a href="assets/img/projects/14.jpg" title="Portrait 2" data-gallery="portfolio-gallery-Portrait" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
+            </div>
+          </div>
+        </div><!-- End Projects Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-Portrait">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/projects/12.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Portrait 3</h4> 
+              <a href="assets/img/projects/12.jpg" title="Portrait 3" data-gallery="portfolio-gallery-Portrait" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
+            </div>
+          </div>
+        </div><!-- End Projects Item -->
+
+
+
+      </div><!-- End Projects Container -->
+
+    </div>
+
+  </div>
+</section><!-- End Our Projects Section -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Teknik Geodesi</h3>
+              <h4>Fakultas Teknik Universitas Gadjah Mada</h4> <br>
+              <p>
+                Jl. Grafika Bulaksumur No.2<br>
+                Sendowo, Sinduadi, Kec. Mlati, Kabupaten Sleman<br>
+                Daerah Istimewa Yogyakarta 55281 <br>
+                <strong>Phone:</strong> (0274) 520226<br>
+                <strong>Email:</strong> geodesi@ugm.ac.id<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="https://twitter.com/geodesiugm" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/geodesiugm" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/geodesiugm/" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Menu Utama</h4>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="tentang_banjir.html">Tentang Banjir</a></li>
+              <li><a href="tentang_longsor.html">Tentang Longsor</a></li>
+              <li><a href="peta.html">Story Maps</a></li>
+              <li><a href="timkami.html">Tim</a></li>
+              <li><a href="contact.html">Kontak</a></li>
+            </ul>
+
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Tautan</h4>
+            <ul>
+              <li><a href="https://geodesi.ugm.ac.id/">Teknik Geodesi UGM</a></li>
+              <li><a href="https://ft.ugm.ac.id/">Fakultas Teknik UGM</a></li>
+              <li><a href="https://ugm.ac.id/">Universitas Gadjah Mada</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Kelompok 6 dan 20 PRGG</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upPortrait-bootstrap-Portrait-website-template/ -->
+          Designed by <a href="https://geodesi.ugm.ac.id/">TeknikGeodesiUGM</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

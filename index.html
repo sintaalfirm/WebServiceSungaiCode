@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Pemetaan Risiko Banjir Longsor</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo.png" class="logo-img">
+        <h1 style="font-size: 20px;">Teknik Geodesi UGM<span>.</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li class="dropdown"><a href="#"><span>Tentang</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="tentang_banjir.html">Banjir</a></li>
+              <li><a href="tentang_longsor.html">Longsor</a></li>
+            </ul>
+            <li><a href="peta.html">Story Maps </a></li>
+          <li class="dropdown"><a href="#"><span>Peta Web</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="QGIS2WEB\risiko_banjir\peta\risiko_banjir.html">Risiko Banjir</a></li>
+              <li><a href="QGIS2WEB\risiko_longsor\peta\risiko_longsor.html">Risiko Longsor</a></li>
+              <li><a href="QGIS2WEB\PL\peta\PL.html">Penggunaan Lahan</a></li>
+            </ul>
+          </li>
+          <li><a href="timkami.html">Tim </a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down"style="white-space: nowrap;">Pemetaan Risiko<br><span>Banjir dan Longsor<br>di Sepanjang Sungai Code</span></h2>
+            <div class="above-line">
+              <h4 data-aos="fade-down" style="color: #ffc732;">STUDI KASUS : Jembatan Wreksodiningrat - Asrama Haji</h4>
+            </div>
+            <br>
+            <p data-aos="fade-up">Selamat datang! Jelajahi potensi risiko bencana banjir dan longsor sepanjang Sungai Code melalui peta interaktif. Temukan informasi banjir dan longsor, peta interaktif, serta solusi mitigasi untuk melindungi dari ancaman bencana alam. Mari bersama-sama membangun kesadaran dan kesiapsiagaan dalam menghadapi risiko bencana banjir dan longsor. </p>
+            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Mulai!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/hero-carousel-1.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-2.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-3.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-4.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-5.jpg)"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Get Started Section ======= -->
+    <section id="get-started" class="get-started section-bg">
+      <div class="container">
+    <section id="constructions" class="constructions">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Kenapa Perlu Dipetakan?</h2>
+          <p>Pemetaan risiko banjir dan longsor menjadi hal yang sangat penting karena dilatar belakangi oleh sebagai berikut.</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(assets/img/constructions-1.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Indonesia Rawan Terhadap Bencana Alam</h4>
+                    <p>Di Indonesia, bencana alam yang sering terjadi adalah bencana banjir dan tanah longsor. Umumnya kedua bencana ini sering disebabkan karena ulah manusia yang merusak alam.  </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(assets/img/constructions-2.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Peran Penting Sungai Code</h4>
+                    <p>Sungai code memiliki peranan penting di Provinsi DI Yogyakarta. Peran sungai Code sangat penting karena kedekatannya dengan lokasi mata pencaharian masyarakat sehingga menyebabkan terjadinya pembangunan infrastruktur di sekitar sungai Code.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(assets/img/constructions-3.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Pembangunan Infrastruktur Merusak Lingkungan </h4>
+                    <p>Pembangunan infrastruktur ini terkadang tidak memperhatikan lingkungan sehingga menyebabkan penurunan tinggi tebing sungai Code yang dapat menimbulkan kawasan sungai Code utara daerah rawan terjadi bencana banjir dan tanah longsor.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(assets/img/constructions-4.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Pentingnya Peta Risiko Banjir dan Longsor</h4>
+                    <p>Oleh karena itu, perlu adanya pemetaan kawasan risiko bencana banjir dan tanah longsor di bantaran Sungai Code untuk mitigasi bencana, peringatan dini, peningkatan kesadaran masyarakat, dan perencanaan pembangunan yang berkelanjutan.  </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Constructions Section -->
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    
+
+    <!-- ======= Alt Services Section ======= -->
+    <section id="alt-services" class="alt-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center">
+            <h3>Tujuan Pemetaan Risiko Banjir dan Longsor</h3>
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <p><class="stretched-link"style="color: black;">Membantu mengidentifikasi faktor-faktor terjadinya bencana banjir dan tanah longsor. </p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <p><class="stretched-link"style="color: black;">Meningkatkan kesadaran tentang bahaya banjir dan tanah longsor, serta cara untuk mengidentifikasi gejala awal dan peringatan diri. </a></p>
+                
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <p><class="stretched-link"style="color: black;"> Memberikan informasi tentang cara mengurangi dampak banjir dan tanah longsor jika bencana tersebut terjadi.   </a></p>
+                
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <p><class="stretched-link"style="color: black;">Meningkatkan kesiapsiagaan dalam menghadapi banjir dan tanah longsor. </a></p>
+                
+              </div>
+            </div><!-- End Icon Box -->
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Alt Services Section -->
+
+        <!-- ======= Services Section ======= -->
+<!-- ======= Services Section ======= -->
+<section id="services" class="services section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Tentang Banjir dan Longsor</h2>
+      <p>Di sini, Anda dapat memperoleh informasi mengenai risiko banjir dan longsor, serta langkah-langkah pencegahan yang dapat diambil.</p>
+    </div>
+
+    <div class="row gy-4">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+          </div>
+          <h3>Banjir</h3>
+          <p>Jelajahi informasi terkait definisi, faktor penyebab, peringatan dini, mitigasi bencana, dan dampak bencana banjir. </p>
+          <a href="tentang_banjir.html" class="readmore stretched-link">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <i class="fa-solid fa-mountain-city"></i>
+          </div>
+          <h3>Longsor</h3>
+          <p>Jelajahi informasi terkait definisi, faktor penyebab, proses pemicu, gejala dan peringatan dini, tanda-tanda, daerah rawan, mitigasi bencana, dan dampak bencana longsor. </p>
+          <a href="tentang_longsor.html" class="readmore stretched-link">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div><!-- End Service Item -->
+          </div>
+        </section><!-- End Services Section -->
+      
+              <!-- ======= Call To Action Section ======= -->
+              <section id="call-to-action" class="call-to-action">
+                <div class="container" data-aos="fade-up">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                      <h3>Menjelajah Story Maps</h3>
+                      <p>Temukan informasi penting tentang zona-zona risiko, lokasi pada peta interaktif, dan foto tampilan dalam bentuk 360 derajat </p>
+                      <a class="cta-btn" href="peta.html">Lihat Story Maps</a>
+                    </div>
+                  </div>
+          
+                </div>
+              </section><!-- End Call To Action Section -->
+
+            <!-- ======= Stats Counter Section ======= -->
+<section id="stats-counter" class="stats-counter section-bg">
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="stats-item d-flex align-items-center w-100 h-100">
+          <i class="fa-solid fa-mountain-city"></i>
+          <div>
+            <span data-purecounter-start="0" data-purecounter-end="343" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Area yang Dipetakan (Ha)</p>
+          </div>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-4 col-md-6">
+        <div class="stats-item d-flex align-items-center w-100 h-100">
+          <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+          <div>
+            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Luas Risiko Tinggi Banjir (Ha)</p>
+          </div>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-4 col-md-6">
+        <div class="stats-item d-flex align-items-center w-100 h-100">
+          <i class="fa-solid fa-trowel-bricks"></i>
+          <div>
+            <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Luas Risiko Tinggi Longsor (Ha)</p>
+          </div>
+        </div>
+      </div><!-- End Stats Item -->
+    </div>
+
+  </div>
+</section><!-- End Stats Counter Section -->
+
+
+  
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Teknik Geodesi</h3>
+              <h4>Fakultas Teknik Universitas Gadjah Mada</h4> <br>
+              <p>
+                Jl. Grafika Bulaksumur No.2<br>
+                Sendowo, Sinduadi, Kec. Mlati, Kabupaten Sleman<br>
+                Daerah Istimewa Yogyakarta 55281 <br>
+                <strong>Phone:</strong> (0274) 520226<br>
+                <strong>Email:</strong> geodesi@ugm.ac.id<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="https://twitter.com/geodesiugm" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/geodesiugm" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/geodesiugm/" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Menu Utama</h4>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="tentang_banjir.html">Tentang Banjir</a></li>
+              <li><a href="tentang_longsor.html">Tentang Longsor</a></li>
+              <li><a href="peta.html">Story Maps</a></li>
+              <li><a href="timkami.html">Tim</a></li>
+              <li><a href="contact.html">Kontak</a></li>
+            </ul>
+
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Tautan</h4>
+            <ul>
+              <li><a href="https://geodesi.ugm.ac.id/">Teknik Geodesi UGM</a></li>
+              <li><a href="https://ft.ugm.ac.id/">Fakultas Teknik UGM</a></li>
+              <li><a href="https://ugm.ac.id/">Universitas Gadjah Mada</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Kelompok 6 dan 20 PRGG</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
+          Designed by <a href="https://geodesi.ugm.ac.id/">TeknikGeodesiUGM</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
