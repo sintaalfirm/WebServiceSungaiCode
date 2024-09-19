@@ -1,6 +1,3 @@
-Thanks for downloading this template!
+Proyek Rekayasa Geodesi Geomatika
 
-Template Name: UpConstruction
-Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Kelompok 5 2024/2025
