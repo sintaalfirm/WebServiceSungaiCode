@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_titikresikobanjirtinggi_14 = function(feature, resolution){
+var style_Titikresikobanjirtinggi_12 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -23,8 +23,8 @@ var style_titikresikobanjirtinggi_14 = function(feature, resolution){
     var style = [ new ol.style.Style({
         image: new ol.style.Icon({
                   imgSize: [700, 700],
-                  scale: 0.02142857142857143,
-                  anchor: [7, 7],
+                  scale: 0.04285714285714286,
+                  anchor: [15, 15],
                   anchorXUnits: "pixels",
                   anchorYUnits: "pixels",
                   rotation: 0.0,
