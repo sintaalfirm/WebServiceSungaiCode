@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_Titikresikobanjirsedang_13 = function(feature, resolution){
+var style_Titikresikobanjirsedang_11 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -21,15 +21,8 @@ var style_Titikresikobanjirsedang_13 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.Icon({
-                  imgSize: [700, 700],
-                  scale: 0.04285714285714286,
-                  anchor: [15, 15],
-                  anchorXUnits: "pixels",
-                  anchorYUnits: "pixels",
-                  rotation: 0.0,
-                  src: "styles/blue-marker.svg"
-            }),
+        image: new ol.style.Circle({radius: 4.0 + size,
+            stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0}), fill: new ol.style.Fill({color: 'rgba(191,95,63,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
