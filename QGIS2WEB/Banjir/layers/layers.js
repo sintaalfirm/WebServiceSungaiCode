@@ -150,19 +150,19 @@ var lyr_tinggi_8 = new ol.layer.Vector({
                 url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
             })
         });
-var format_Sungai_11 = new ol.format.GeoJSON();
-var features_Sungai_11 = format_Sungai_11.readFeatures(json_Sungai_11, 
+var format_sungai_11 = new ol.format.GeoJSON();
+var features_sungai_11 = format_sungai_11.readFeatures(json_sungai_11, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Sungai_11 = new ol.source.Vector({
+var jsonSource_sungai_11 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Sungai_11.addFeatures(features_Sungai_11);
-var lyr_Sungai_11 = new ol.layer.Vector({
+jsonSource_sungai_11.addFeatures(features_sungai_11);
+var lyr_sungai_11 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_Sungai_11, 
-                style: style_Sungai_11,
+                source:jsonSource_sungai_11, 
+                style: style_sungai_11,
                 interactive: true,
-                title: '<img src="styles/legend/Sungai_11.png" /> Sungai'
+                title: '<img src="styles/legend/sungai_11.png" /> sungai'
             });
 var format_Titikresikobanjirsedang_12 = new ol.format.GeoJSON();
 var features_Titikresikobanjirsedang_12 = format_Titikresikobanjirsedang_12.readFeatures(json_Titikresikobanjirsedang_12, 
@@ -199,8 +199,8 @@ var group_Penggunaanlahan = new ol.layer.Group({
                                 layers: [lyr_Bataswilayah_0,lyr_Bangunan_1,lyr_Jalan_2,lyr_Kebun_3,lyr_Sawah_4,lyr_Semak_5,],
                                 title: "Penggunaan lahan"});
 
-lyr_Bataswilayah_0.setVisible(false);lyr_Bangunan_1.setVisible(false);lyr_Jalan_2.setVisible(false);lyr_Kebun_3.setVisible(false);lyr_Sawah_4.setVisible(false);lyr_Semak_5.setVisible(false);lyr_rendah_6.setVisible(true);lyr_sedang_7.setVisible(true);lyr_tinggi_8.setVisible(true);lyr_GoogleSatellite_9.setVisible(false);lyr_OpenStreetMap_10.setVisible(true);lyr_Sungai_11.setVisible(true);lyr_Titikresikobanjirsedang_12.setVisible(true);lyr_Titikresikobanjirtinggi_13.setVisible(true);
-var layersList = [lyr_GoogleSatellite_9,lyr_OpenStreetMap_10,group_Penggunaanlahan,group_ResikoBanjir,lyr_Sungai_11,lyr_Titikresikobanjirsedang_12,lyr_Titikresikobanjirtinggi_13];
+lyr_Bataswilayah_0.setVisible(false);lyr_Bangunan_1.setVisible(false);lyr_Jalan_2.setVisible(false);lyr_Kebun_3.setVisible(false);lyr_Sawah_4.setVisible(false);lyr_Semak_5.setVisible(false);lyr_rendah_6.setVisible(true);lyr_sedang_7.setVisible(true);lyr_tinggi_8.setVisible(true);lyr_GoogleSatellite_9.setVisible(false);lyr_OpenStreetMap_10.setVisible(true);lyr_sungai_11.setVisible(true);lyr_Titikresikobanjirsedang_12.setVisible(true);lyr_Titikresikobanjirtinggi_13.setVisible(true);
+var layersList = [lyr_GoogleSatellite_9,lyr_OpenStreetMap_10,group_Penggunaanlahan,group_ResikoBanjir,lyr_sungai_11,lyr_Titikresikobanjirsedang_12,lyr_Titikresikobanjirtinggi_13];
 lyr_Bataswilayah_0.set('fieldAliases', {'Kabupaten': 'Kabupaten', });
 lyr_Bangunan_1.set('fieldAliases', {'FID_Pemuki': 'FID_Pemuki', 'Id': 'Id', 'bgn': 'bgn', 'OBJECTID': 'OBJECTID', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', 'layer': 'layer', 'path': 'path', 'FID_Bangun': 'FID_Bangun', 'Id_1': 'Id_1', });
 lyr_Jalan_2.set('fieldAliases', {'FID_jalan_': 'FID_jalan_', 'FID_jalan1': 'FID_jalan1', 'Id': 'Id', 'Shape_Leng': 'Shape_Leng', 'Shape_Area': 'Shape_Area', 'FID_jala_1': 'FID_jala_1', 'Id_1': 'Id_1', 'Shape_Le_1': 'Shape_Le_1', 'Shape_Ar_1': 'Shape_Ar_1', 'FID_jalan': 'FID_jalan', 'id_12': 'id_12', 'id_2': 'id_2', 'FID_Jala_2': 'FID_Jala_2', 'Id_12_13': 'Id_12_13', });
@@ -210,7 +210,7 @@ lyr_Semak_5.set('fieldAliases', {'FID_Semak_': 'FID_Semak_', 'id': 'id', 'layer'
 lyr_rendah_6.set('fieldAliases', {'Kerentanan': 'Kerentanan', 'skor_rawan': 'skor_rawan', 'skor_kapst': 'skor_kapst', 'resiko': 'resiko', 'Kriteria': 'Kriteria', });
 lyr_sedang_7.set('fieldAliases', {'Kerentanan': 'Kerentanan', 'skor_rawan': 'skor_rawan', 'skor_kapst': 'skor_kapst', 'resiko': 'resiko', 'Kriteria': 'Kriteria', });
 lyr_tinggi_8.set('fieldAliases', {'Kerentanan': 'Kerentanan', 'skor_rawan': 'skor_rawan', 'skor_kapst': 'skor_kapst', 'resiko': 'resiko', 'Kriteria': 'Kriteria', });
-lyr_Sungai_11.set('fieldAliases', {'Kabupaten': 'Kabupaten', 'id': 'id', });
+lyr_sungai_11.set('fieldAliases', {'Kabupaten': 'Kabupaten', 'id': 'id', });
 lyr_Titikresikobanjirsedang_12.set('fieldAliases', {'No titik': 'No titik', 'Foto': 'Foto', });
 lyr_Titikresikobanjirtinggi_13.set('fieldAliases', {'No titik': 'No titik', 'Foto': 'Foto', });
 lyr_Bataswilayah_0.set('fieldImages', {'Kabupaten': '', });
@@ -222,7 +222,7 @@ lyr_Semak_5.set('fieldImages', {'FID_Semak_': '', 'id': '', 'layer': '', 'path':
 lyr_rendah_6.set('fieldImages', {'Kerentanan': 'TextEdit', 'skor_rawan': 'TextEdit', 'skor_kapst': 'TextEdit', 'resiko': 'TextEdit', 'Kriteria': 'TextEdit', });
 lyr_sedang_7.set('fieldImages', {'Kerentanan': 'TextEdit', 'skor_rawan': 'TextEdit', 'skor_kapst': 'TextEdit', 'resiko': 'TextEdit', 'Kriteria': 'TextEdit', });
 lyr_tinggi_8.set('fieldImages', {'Kerentanan': 'TextEdit', 'skor_rawan': 'TextEdit', 'skor_kapst': 'TextEdit', 'resiko': 'TextEdit', 'Kriteria': 'TextEdit', });
-lyr_Sungai_11.set('fieldImages', {'Kabupaten': '', 'id': '', });
+lyr_sungai_11.set('fieldImages', {'Kabupaten': '', 'id': '', });
 lyr_Titikresikobanjirsedang_12.set('fieldImages', {'No titik': 'TextEdit', 'Foto': '', });
 lyr_Titikresikobanjirtinggi_13.set('fieldImages', {'No titik': 'TextEdit', 'Foto': '', });
 lyr_Bataswilayah_0.set('fieldLabels', {});
@@ -234,7 +234,7 @@ lyr_Semak_5.set('fieldLabels', {});
 lyr_rendah_6.set('fieldLabels', {});
 lyr_sedang_7.set('fieldLabels', {});
 lyr_tinggi_8.set('fieldLabels', {});
-lyr_Sungai_11.set('fieldLabels', {'Kabupaten': 'no label', 'id': 'no label', });
+lyr_sungai_11.set('fieldLabels', {'Kabupaten': 'no label', 'id': 'no label', });
 lyr_Titikresikobanjirsedang_12.set('fieldLabels', {'No titik': 'header label', 'Foto': 'header label', });
 lyr_Titikresikobanjirtinggi_13.set('fieldLabels', {'No titik': 'header label', 'Foto': 'header label', });
 lyr_Titikresikobanjirtinggi_13.on('precompose', function(evt) {
