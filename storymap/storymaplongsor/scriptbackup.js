@@ -17,7 +17,7 @@ var map = L.map('map', {
   });
   
   // Tambahkan geoJSON ke peta
-  L.geoJSON(banjirjson, {
+  L.geoJSON(longsorjson, {
     onEachFeature: onEachFeature
   }).addTo(map);
   
