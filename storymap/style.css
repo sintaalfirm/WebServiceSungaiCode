@@ -120,19 +120,20 @@ body {
     color: white;
 }
 
+.next-point-arrow {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5px; /* Tambahkan padding */
+    transition: transform 0.2s; /* Tambahkan transisi untuk efek hover */
+}
+
+.next-point-arrow:hover {
+    transform: scale(1.2); /* Perbesar saat di-hover agar lebih terlihat */
+}
+
 .next-point-arrow:hover::after {
     content: " Menuju titik berikutnya";
     color: #007bff;
     font-size: 16px;
     margin-left: 5px;
-}
-
-.next-point-arrow {
-    display: inline-block;
-    margin: 10px 0;
-    transition: transform 0.2s; /* Add some transition for hover effect */
-}
-
-.next-point-arrow:hover {
-    transform: scale(1.2); /* Scale up on hover for visibility */
 }

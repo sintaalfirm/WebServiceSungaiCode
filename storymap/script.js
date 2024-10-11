@@ -24,41 +24,82 @@ L.geoJSON(banjirjson, {
 
 // Add GeoJSON data from the external JS variable to the map
 function onEachFeature(feature, layer) {
-  // Konten popup dengan panah gambar
-  var popupContent = `
+  // Cek apakah photo360 adalah iframe (dari URL momento360) atau gambar biasa
+  let isIframe = feature.properties.photo360.includes("momento360");
+  let popupContent = `
       <h5>${feature.properties.name}</h5>
-      ${feature.properties.photo360}
+      <div style="text-align: center;">`;
+
+  if (isIframe) {
+      // Jika iframe (untuk momento360), masukkan URL ke dalam iframe tag
+      popupContent += `
+          <iframe src="${feature.properties.photo360}" 
+                  width="100%" height="300" 
+                  style="border:none; display:block; margin:0 auto;"></iframe>`;
+  } else {
+      // Jika img (URL gambar biasa), tampilkan sebagai gambar
+      popupContent += `
+          <img src="${feature.properties.photo360}" 
+               width="300" height="250" 
+               style="object-fit:cover; display:block; margin:0 auto; max-width:300px;">`;
+  }
+
+  popupContent += `</div>
       <br>
       <div style="text-align:center;">
-          <img class="next-point-arrow" data-next="${feature.properties.next_id}" src="https://raw.githubusercontent.com/sintaalfirm/WebServiceSungaiCode/refs/heads/main/icons8-upward-arrow-64.png" style="width: 40px; cursor: pointer;" alt="Next">
+          <img class="next-point-arrow" data-next="${feature.properties.next_id}" 
+              src="https://raw.githubusercontent.com/sintaalfirm/WebServiceSungaiCode/refs/heads/main/icons8-upward-arrow-64.png" 
+              style="width: 40px; cursor: pointer;" alt="Next">
       </div>
   `;
 
-  layer.bindPopup(popupContent);
+  layer.bindPopup(popupContent, {maxWidth: "auto", maxHeight: 400});
+
   // Update side panel ketika titik diklik
   layer.on('click', function () {
-      $('#location-info').html(`<h6><strong>Titik banjir ${feature.properties.name}</strong></h6><p>${feature.properties.description}</p>`);
+      $('#location-info').html(`
+          <h6><strong>Titik banjir ${feature.properties.name}</strong></h6>
+          <p>${feature.properties.description}</p>
+      `);
   });
 }
-
 
 // Event listener untuk navigasi ke titik berikutnya
 $(document).on('click', '.next-point-arrow', function (e) {
   e.preventDefault();
-  var nextId = $(this).data('next');
+  var nextId = $(this).data('next'); // Mengambil data-next dari elemen img
   var nextFeature = banjirjson.features.find(f => f.properties.id == nextId);
 
   if (nextFeature) {
+      // Render popup baru untuk titik berikutnya
+      var isIframe = nextFeature.properties.photo360.includes("momento360");
       var nextPopup = `
           <h5>${nextFeature.properties.name}</h5>
-          ${nextFeature.properties.photo360}
+          <div style="text-align: center;">`;
+
+      if (isIframe) {
+          nextPopup += `
+              <iframe src="${nextFeature.properties.photo360}" 
+                      width="100%" height="300" 
+                      style="border:none; display:block; margin:0 auto;"></iframe>`;
+      } else {
+          nextPopup += `
+              <img src="${nextFeature.properties.photo360}" 
+                   width="300" height="250" 
+                   style="object-fit:cover; display:block; margin:0 auto; max-width:300px;">`;
+      }
+
+      nextPopup += `
+          </div>
           <br>
           <div style="text-align:center;">
-              <img class="next-point-arrow" data-next="${nextFeature.properties.next_id}" src="https://raw.githubusercontent.com/sintaalfirm/WebServiceSungaiCode/refs/heads/main/icons8-upward-arrow-64.png" style="width: 40px; cursor: pointer;" alt="Next">
+              <img class="next-point-arrow" data-next="${nextFeature.properties.next_id}" 
+                   src="https://raw.githubusercontent.com/sintaalfirm/WebServiceSungaiCode/refs/heads/main/icons8-upward-arrow-64.png" 
+                   style="width: 40px; cursor: pointer;" alt="Next">
           </div>
       `;
 
-      map.setView([nextFeature.geometry.coordinates[1], nextFeature.geometry.coordinates[0]], 18); // Zoom to next point
+      map.setView([nextFeature.geometry.coordinates[1], nextFeature.geometry.coordinates[0]], 18);
 
       L.popup()
           .setLatLng([nextFeature.geometry.coordinates[1], nextFeature.geometry.coordinates[0]])
