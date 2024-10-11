@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+#location-info {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#location-info h6 {
+    font-weight: 700; /* Cetak tebal untuk "Titik banjir [nama titik]" */
+}
+
+#location-info p {
+    font-weight: 400; /* Normal untuk deskripsi */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Map and panel styles */
+#map {
+    height: 100vh;
+    width: calc(100vw - 300px); /* Menyisakan ruang untuk panel */
+    position: absolute;
+    right: 0;
+}
+
+#info-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background: #ffffff; /* Coklat */
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* Header and footer styles */
+#header, #footer {
+    width: 100vw;
+    background-color: #8B4513; /* Warna coklat untuk header dan footer */
+    color: white;
+    padding: 8px;
+    position: absolute;
+    z-index: 1100;
+}
+
+#header {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer {
+    bottom: 0;
+    text-align: center;
+    padding: 2px; /* Mengurangi tinggi footer */
+    
+}
+
+.dropdown-menu {
+    background-color: #ffffff; /* Warna coklat untuk dropdown */
+}
+
+.dropdown-item:hover {
+    background-color: #8B4513;
+    color: white;
+}
+
+/* Change cursor on hover */
+#basemapButton {
+    position: absolute;
+    bottom: 70px;
+    right: 20px;
+    z-index: 1200;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Change cursor on hover */
+#basemapButton:hover {
+    background-color: #d2b48c;
+}
+
+/* Styles for zoom control */
+.leaflet-control-zoom {
+    position: absolute;
+    top: 80px; /* Jarak dari atas untuk menghindari header */
+    left: 20px; /* Pojok kiri */
+    z-index: 1000;
+}
+
+.modal {
+    z-index: 1050; /* Pastikan z-index modal lebih tinggi dari header */
+}
+
+.modal-header {
+    background-color: #d2b48c; /* Warna latar belakang header modal */
+}
+
+.modal-footer {
+    background-color: #f8f9fa; /* Warna latar belakang footer modal */
+}
+
+
+
+.navbar .dropdown-menu {
+    background-color: #ffffff; /* Warna sand untuk dropdown */
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #8B4513; 
+    color: white;
+}
+
+.next-point-arrow:hover::after {
+    content: " Menuju titik berikutnya";
+    color: #007bff;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.next-point-arrow {
+    display: inline-block;
+    margin: 10px 0;
+    transition: transform 0.2s; /* Add some transition for hover effect */
+}
+
+.next-point-arrow:hover {
+    transform: scale(1.2); /* Scale up on hover for visibility */
+}
