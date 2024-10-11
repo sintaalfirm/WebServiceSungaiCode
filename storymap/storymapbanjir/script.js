@@ -34,7 +34,7 @@ function onEachFeature(feature, layer) {
       // Jika iframe (untuk momento360), masukkan URL ke dalam iframe tag
       popupContent += `
           <iframe src="${feature.properties.photo360}" 
-                  width="100%" height="300" 
+                  width="300" height="250" 
                   style="border:none; display:block; margin:0 auto;"></iframe>`;
   } else {
       // Jika img (URL gambar biasa), tampilkan sebagai gambar
@@ -93,7 +93,7 @@ $(document).on('click', '.next-point-arrow', function (e) {
         if (isIframe) {
             nextPopup += `
                 <iframe src="${nextFeature.properties.photo360}" 
-                        width="100%" height="300" 
+                        width="300" height="250" 
                         style="border:none; display:block; margin:0 auto;"></iframe>`;
         } else {
             nextPopup += `
