@@ -67,7 +67,7 @@ function onEachFeature(feature, layer) {
 // Event listener untuk navigasi ke titik berikutnya
 $(document).on('mouseenter', '.next-point-arrow', function () {
     var nextId = $(this).data('next'); // Mengambil data-next dari elemen img
-    var nextFeature = banjirjson.features.find(f => f.properties.id == nextId);
+    var nextFeature = longsorjson.features.find(f => f.properties.id == nextId);
     if (nextFeature) {
         // Tampilkan tooltip dengan nama titik berikutnya
         $(this).attr('title', `Menuju ke titik ${nextFeature.properties.name}`);
@@ -81,7 +81,7 @@ $(document).on('mouseenter', '.next-point-arrow', function () {
 $(document).on('click', '.next-point-arrow', function (e) {
     e.preventDefault();
     var nextId = $(this).data('next'); // Mengambil data-next dari elemen img
-    var nextFeature = banjirjson.features.find(f => f.properties.id == nextId);
+    var nextFeature = longsorjson.features.find(f => f.properties.id == nextId);
 
     if (nextFeature) {
         // Render popup baru untuk titik berikutnya
@@ -93,12 +93,12 @@ $(document).on('click', '.next-point-arrow', function (e) {
         if (isIframe) {
             nextPopup += `
                 <iframe src="${nextFeature.properties.photo360}" 
-                        width="100%" height="300" 
+                       width="300" height="250"  
                         style="border:none; display:block; margin:0 auto;"></iframe>`;
         } else {
             nextPopup += `
                 <img src="${nextFeature.properties.photo360}" 
-                     width="300" height="250" 
+                     width="100%" height="300" 
                      style="object-fit:cover; display:block; margin:0 auto; max-width:300px;">`;
         }
 

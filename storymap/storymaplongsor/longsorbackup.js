@@ -1,6 +1,6 @@
 var banjirjson = {
     "type": "FeatureCollection",
-    "name": "titikbanjircobajson3",
+    "name": "longsor",
     "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
     "features": [
     { "type": "Feature", "properties": { "name": "B1", "photo360": "<iframe src=\"https://momento360.com/e/u/b316425c195742458d4f2b77945f4a50?utm_campaign=embed&utm_source=other&heading=26.1&pitch=-1.4&field-of-view=75&size=medium&display-plan=true\" width=\"300\" height=\"250\" frameborder=\"0\" allowfullscreen>", "description": "deskripsi untuk titik B1", "id": 157, "next_id": 158 }, "geometry": { "type": "Point", "coordinates": [ 110.371792191377111, -7.756451412289735 ] } },

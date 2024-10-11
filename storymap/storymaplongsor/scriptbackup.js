@@ -38,7 +38,7 @@ var map = L.map('map', {
   
     // Update side panel ketika titik diklik
     layer.on('click', function () {
-        $('#location-info').html(`<h6><strong>Titik banjir ${feature.properties.name}</strong></h6><p>${feature.properties.description}</p>`);
+        $('#location-info').html(`<h6><strong>Titik Tanah Longsor ${feature.properties.name}</strong></h6><p>${feature.properties.description}</p>`);
     });
   }
   
