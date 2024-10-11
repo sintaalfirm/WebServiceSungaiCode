@@ -140,26 +140,31 @@
         .navbar-custom .nav-link {
                 color: white; /* White text */
         }
+        footer {
+        height: 40px;
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        width: 100%;
+    }
         </style>
         <title></title>
     </head>
     <body>
         <!-- Header -->
-        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-            <div class="container">
-                <a class="navbar-brand" href="#">Peta daerah resiko bencana banjir wilayah Sungai Code</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../index.html">Home</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+            <div class="d-flex align-items-center">
+              <a class="btn btn-primary nav-link" href="../../index.html" role="button">Home</a>
             </div>
-        </nav>
+            <div class="mx-auto">
+              <a class="navbar-brand text-center" href="#">Peta Lokasi Resiko Bencana Banjir Wilayah Sungai Code</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
         <div id="map">
             <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
@@ -181,5 +186,9 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- footer -->
+    <footer>
+        &copy; Kelompok 5 PRGG 2024/2025
+    </footer>
     </body>
 </html>
