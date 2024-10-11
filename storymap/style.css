@@ -121,19 +121,24 @@ body {
 }
 
 .next-point-arrow {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 5px; /* Tambahkan padding */
-    transition: transform 0.2s; /* Tambahkan transisi untuk efek hover */
+    position: relative;
 }
 
-.next-point-arrow:hover {
-    transform: scale(1.2); /* Perbesar saat di-hover agar lebih terlihat */
+.next-point-arrow::after {
+    content: attr(title);
+    position: absolute;
+    left: 50%;
+    bottom: 100%; /* Menempatkan tooltip di atas gambar panah */
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    display: none; /* Sembunyikan tooltip secara default */
+    z-index: 1000;
 }
 
 .next-point-arrow:hover::after {
-    content: " Menuju titik berikutnya";
-    color: #007bff;
-    font-size: 16px;
-    margin-left: 5px;
+    display: block; /* Tampilkan tooltip saat hover */
 }

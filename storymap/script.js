@@ -65,47 +65,60 @@ function onEachFeature(feature, layer) {
 }
 
 // Event listener untuk navigasi ke titik berikutnya
+$(document).on('mouseenter', '.next-point-arrow', function () {
+    var nextId = $(this).data('next'); // Mengambil data-next dari elemen img
+    var nextFeature = banjirjson.features.find(f => f.properties.id == nextId);
+    if (nextFeature) {
+        // Tampilkan tooltip dengan nama titik berikutnya
+        $(this).attr('title', `Menuju ke titik ${nextFeature.properties.name}`);
+    }
+}).on('mouseleave', '.next-point-arrow', function () {
+    // Hapus tooltip saat mouse keluar
+    $(this).removeAttr('title');
+});
+
+// Event listener untuk klik
 $(document).on('click', '.next-point-arrow', function (e) {
-  e.preventDefault();
-  var nextId = $(this).data('next'); // Mengambil data-next dari elemen img
-  var nextFeature = banjirjson.features.find(f => f.properties.id == nextId);
+    e.preventDefault();
+    var nextId = $(this).data('next'); // Mengambil data-next dari elemen img
+    var nextFeature = banjirjson.features.find(f => f.properties.id == nextId);
 
-  if (nextFeature) {
-      // Render popup baru untuk titik berikutnya
-      var isIframe = nextFeature.properties.photo360.includes("momento360");
-      var nextPopup = `
-          <h5>${nextFeature.properties.name}</h5>
-          <div style="text-align: center;">`;
+    if (nextFeature) {
+        // Render popup baru untuk titik berikutnya
+        var isIframe = nextFeature.properties.photo360.includes("momento360");
+        var nextPopup = `
+            <h5>${nextFeature.properties.name}</h5>
+            <div style="text-align: center;">`;
 
-      if (isIframe) {
-          nextPopup += `
-              <iframe src="${nextFeature.properties.photo360}" 
-                      width="100%" height="300" 
-                      style="border:none; display:block; margin:0 auto;"></iframe>`;
-      } else {
-          nextPopup += `
-              <img src="${nextFeature.properties.photo360}" 
-                   width="300" height="250" 
-                   style="object-fit:cover; display:block; margin:0 auto; max-width:300px;">`;
-      }
+        if (isIframe) {
+            nextPopup += `
+                <iframe src="${nextFeature.properties.photo360}" 
+                        width="100%" height="300" 
+                        style="border:none; display:block; margin:0 auto;"></iframe>`;
+        } else {
+            nextPopup += `
+                <img src="${nextFeature.properties.photo360}" 
+                     width="300" height="250" 
+                     style="object-fit:cover; display:block; margin:0 auto; max-width:300px;">`;
+        }
 
-      nextPopup += `
-          </div>
-          <br>
-          <div style="text-align:center;">
-              <img class="next-point-arrow" data-next="${nextFeature.properties.next_id}" 
-                   src="https://raw.githubusercontent.com/sintaalfirm/WebServiceSungaiCode/refs/heads/main/icons8-upward-arrow-64.png" 
-                   style="width: 40px; cursor: pointer;" alt="Next">
-          </div>
-      `;
+        nextPopup += `
+            </div>
+            <br>
+            <div style="text-align:center;">
+                <img class="next-point-arrow" data-next="${nextFeature.properties.next_id}" 
+                     src="https://raw.githubusercontent.com/sintaalfirm/WebServiceSungaiCode/refs/heads/main/icons8-upward-arrow-64.png" 
+                     style="width: 40px; cursor: pointer;" alt="Next">
+            </div>
+        `;
 
-      map.setView([nextFeature.geometry.coordinates[1], nextFeature.geometry.coordinates[0]], 18);
+        map.setView([nextFeature.geometry.coordinates[1], nextFeature.geometry.coordinates[0]], 18);
 
-      L.popup()
-          .setLatLng([nextFeature.geometry.coordinates[1], nextFeature.geometry.coordinates[0]])
-          .setContent(nextPopup)
-          .openOn(map);
-  }
+        L.popup()
+            .setLatLng([nextFeature.geometry.coordinates[1], nextFeature.geometry.coordinates[0]])
+            .setContent(nextPopup)
+            .openOn(map);
+    }
 });
 
 
