@@ -112,12 +112,20 @@ $(document).on('click', '.next-point-arrow', function (e) {
             </div>
         `;
 
+        // Set map view to the next feature's coordinates
         map.setView([nextFeature.geometry.coordinates[1], nextFeature.geometry.coordinates[0]], 18);
 
+        // Open the popup for the next point
         L.popup()
             .setLatLng([nextFeature.geometry.coordinates[1], nextFeature.geometry.coordinates[0]])
             .setContent(nextPopup)
             .openOn(map);
+
+        // Perbarui deskripsi di panel samping
+        $('#location-info').html(`
+            <h6><strong>Titik banjir ${nextFeature.properties.name}</strong></h6>
+            <p>${nextFeature.properties.description}</p>
+        `);
     }
 });
 
