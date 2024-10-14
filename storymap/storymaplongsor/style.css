@@ -10,6 +10,7 @@
 
 #location-info p {
     font-weight: 400; /* Normal untuk deskripsi */
+    text-align: justify;
 }
 
 body {
