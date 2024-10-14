@@ -93,12 +93,12 @@ $(document).on('click', '.next-point-arrow', function (e) {
         if (isIframe) {
             nextPopup += `
                 <iframe src="${nextFeature.properties.photo360}" 
-                       width="300" height="250"  
+                        width="300" height="250" 
                         style="border:none; display:block; margin:0 auto;"></iframe>`;
         } else {
             nextPopup += `
                 <img src="${nextFeature.properties.photo360}" 
-                     width="100%" height="300" 
+                     width="300" height="250" 
                      style="object-fit:cover; display:block; margin:0 auto; max-width:300px;">`;
         }
 
@@ -112,12 +112,20 @@ $(document).on('click', '.next-point-arrow', function (e) {
             </div>
         `;
 
+        // Set map view to the next feature's coordinates
         map.setView([nextFeature.geometry.coordinates[1], nextFeature.geometry.coordinates[0]], 18);
 
+        // Open the popup for the next point
         L.popup()
             .setLatLng([nextFeature.geometry.coordinates[1], nextFeature.geometry.coordinates[0]])
             .setContent(nextPopup)
             .openOn(map);
+
+        // Perbarui deskripsi di panel samping
+        $('#location-info').html(`
+            <h6><strong>Titik Longsor ${nextFeature.properties.name}</strong></h6>
+            <p>${nextFeature.properties.description}</p>
+        `);
     }
 });
 
