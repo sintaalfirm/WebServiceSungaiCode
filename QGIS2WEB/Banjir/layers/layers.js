@@ -199,7 +199,7 @@ var group_Penggunaanlahan = new ol.layer.Group({
                                 layers: [lyr_Bataswilayah_0,lyr_Bangunan_1,lyr_Jalan_2,lyr_Kebun_3,lyr_Sawah_4,lyr_Semak_5,],
                                 title: "Penggunaan lahan"});
 
-lyr_Bataswilayah_0.setVisible(false);lyr_Bangunan_1.setVisible(false);lyr_Jalan_2.setVisible(false);lyr_Kebun_3.setVisible(false);lyr_Sawah_4.setVisible(false);lyr_Semak_5.setVisible(false);lyr_rendah_6.setVisible(true);lyr_sedang_7.setVisible(true);lyr_tinggi_8.setVisible(true);lyr_GoogleSatellite_9.setVisible(false);lyr_OpenStreetMap_10.setVisible(true);lyr_sungai_11.setVisible(true);lyr_Titikresikobanjirsedang_12.setVisible(true);lyr_Titikresikobanjirtinggi_13.setVisible(true);
+lyr_Bataswilayah_0.setVisible(true);lyr_Bangunan_1.setVisible(true);lyr_Jalan_2.setVisible(true);lyr_Kebun_3.setVisible(true);lyr_Sawah_4.setVisible(true);lyr_Semak_5.setVisible(true);lyr_rendah_6.setVisible(true);lyr_sedang_7.setVisible(true);lyr_tinggi_8.setVisible(true);lyr_GoogleSatellite_9.setVisible(false);lyr_OpenStreetMap_10.setVisible(true);lyr_sungai_11.setVisible(true);lyr_Titikresikobanjirsedang_12.setVisible(true);lyr_Titikresikobanjirtinggi_13.setVisible(true);
 var layersList = [lyr_GoogleSatellite_9,lyr_OpenStreetMap_10,group_Penggunaanlahan,group_ResikoBanjir,lyr_sungai_11,lyr_Titikresikobanjirsedang_12,lyr_Titikresikobanjirtinggi_13];
 lyr_Bataswilayah_0.set('fieldAliases', {'Kabupaten': 'Kabupaten', });
 lyr_Bangunan_1.set('fieldAliases', {'FID_Pemuki': 'FID_Pemuki', 'Id': 'Id', 'bgn': 'bgn', 'OBJECTID': 'OBJECTID', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', 'layer': 'layer', 'path': 'path', 'FID_Bangun': 'FID_Bangun', 'Id_1': 'Id_1', });
