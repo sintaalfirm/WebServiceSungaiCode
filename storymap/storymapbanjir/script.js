@@ -1,7 +1,7 @@
 // Initialize the map first
 var map = L.map('map', {
-  center: [-7.76512, 110.37070],
-  zoom: 14.5
+  center: [-7.78042, 110.37006],
+  zoom: 15
 });
 
 // Initialize OpenStreetMap (brown theme)
@@ -57,11 +57,13 @@ function onEachFeature(feature, layer) {
 
   // Update side panel ketika titik diklik
   layer.on('click', function () {
-      $('#location-info').html(`
-          <h6><strong>Titik banjir ${feature.properties.name}</strong></h6>
-          <p>${feature.properties.description}</p>
-      `);
-  });
+    $('#location-info').html(`
+        <h6><strong>Titik ${feature.properties.name}</strong></h6>
+        <p>${feature.properties.description}</p>
+        <img src="${feature.properties.foto}" 
+             style="width: 100%; height: auto; margin-top: 10px; object-fit:cover;">
+    `);
+});
 }
 
 // Event listener untuk navigasi ke titik berikutnya
@@ -123,8 +125,9 @@ $(document).on('click', '.next-point-arrow', function (e) {
 
         // Perbarui deskripsi di panel samping
         $('#location-info').html(`
-            <h6><strong>Titik banjir ${nextFeature.properties.name}</strong></h6>
+            <h6><strong>Titik ${nextFeature.properties.name}</strong></h6>
             <p>${nextFeature.properties.description}</p>
+            <img src="${nextFeature.properties.foto}" alt="Foto Titik" style="max-width: 100%; height: auto;">
         `);
     }
 });
