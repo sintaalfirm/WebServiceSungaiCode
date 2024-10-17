@@ -182,12 +182,13 @@ $(document).on('click', '.prev-point-arrow', function (e) {
             </div>
             <br>
             <div style="text-align:center;">
-                <img class="prev-point-arrow" data-prev="${prevFeature.properties.prev_id}" 
-                     src="https://raw.githubusercontent.com/sintaalfirm/WebServiceSungaiCode/refs/heads/main/icons8-upward-arrow-64.png" 
-                     style="width: 40px; cursor: pointer; transform: rotate(180deg);" alt="Prev">
                 <img class="next-point-arrow" data-next="${prevFeature.properties.next_id}" 
                      src="https://raw.githubusercontent.com/sintaalfirm/WebServiceSungaiCode/refs/heads/main/icons8-upward-arrow-64.png" 
                      style="width: 40px; cursor: pointer;" alt="Next">
+                <img class="prev-point-arrow" data-prev="${prevFeature.properties.prev_id}" 
+                     src="https://raw.githubusercontent.com/sintaalfirm/WebServiceSungaiCode/refs/heads/main/icons8-upward-arrow-64.png" 
+                     style="width: 40px; cursor: pointer; transform: rotate(180deg);" alt="Prev">
+                
             </div>
         `;
 
