@@ -104,8 +104,10 @@ body {
 }
 
 .modal {
-    z-index: 1050; /* Pastikan z-index modal lebih tinggi dari header */
+    z-index: 1200 !important; /* Pastikan z-index modal lebih tinggi dari header */
 }
+
+
 
 .modal-header {
     background-color: #d2b48c; /* Warna latar belakang header modal */
